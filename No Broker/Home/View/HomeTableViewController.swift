@@ -73,7 +73,7 @@ class HomeTableViewController: UITableViewController {
             cell.propertyImageView.image = #imageLiteral(resourceName: "placeholder")
         }
         
-        if indexPath.row + 5 >= viewModel.numberOfProperties() {
+        if indexPath.row + 10 >= viewModel.numberOfProperties() {
             loadNextPage()
         }
         return cell
@@ -114,6 +114,7 @@ class HomeTableViewController: UITableViewController {
         for i in oldValue..<newValue {
             array.append(IndexPath(row: i, section: 0))
         }
+        self.tableView.setContentOffset(tableView.contentOffset, animated: true)
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: array, with: .automatic)
         self.tableView.endUpdates()
@@ -133,7 +134,10 @@ class HomeTableViewController: UITableViewController {
     
     private func endLoading() {
         self.isLoading = false
-        self.tableView.reloadSections(IndexSet(integer: 1), with: .none)
+        let indexPath = IndexPath(row: 0, section: 1)
+        if let _ = tableView.cellForRow(at: indexPath) {
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
     }
     
     private func startLoading(){

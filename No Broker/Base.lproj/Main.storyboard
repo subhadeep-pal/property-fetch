@@ -20,15 +20,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" rowHeight="400" id="FHI-D3-nxc" customClass="HomeTableViewCell" customModule="No_Broker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="400"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" rowHeight="380" id="FHI-D3-nxc" customClass="HomeTableViewCell" customModule="No_Broker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="380"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FHI-D3-nxc" id="yDB-uF-nkB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3L-xu-5d2" customClass="GradientUIView" customModule="No_Broker" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="11" width="343" height="378"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="358"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-Gk-nvV">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
@@ -94,7 +94,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvt-d1-dkP">
-                                                    <rect key="frame" x="0.0" y="318" width="343" height="60"/>
+                                                    <rect key="frame" x="0.0" y="298" width="343" height="60"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-vD-ddq">
                                                             <rect key="frame" x="0.0" y="0.0" width="113.5" height="60"/>
@@ -201,7 +201,7 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="T3Z-M2-0Ub">
-                                                    <rect key="frame" x="0.0" y="80" width="343" height="238"/>
+                                                    <rect key="frame" x="0.0" y="80" width="343" height="218"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,18 +252,18 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadingCell" rowHeight="60" id="FAK-GP-X9n" customClass="LoadingTableViewCell" customModule="No_Broker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="428" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="408" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FAK-GP-X9n" id="bbb-vd-evu">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="97I-mY-AUE">
-                                            <rect key="frame" x="169" y="12" width="37" height="37"/>
+                                            <rect key="frame" x="169" y="11.5" width="37" height="37"/>
                                             <color key="color" red="1" green="0.33869278489999999" blue="0.4750611139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </activityIndicatorView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No more properties to show..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-5z-cmr">
-                                            <rect key="frame" x="97" y="22.5" width="180" height="16"/>
+                                            <rect key="frame" x="97" y="22" width="180" height="16"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                             <color key="textColor" red="1" green="0.33869278489999999" blue="0.4750611139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
