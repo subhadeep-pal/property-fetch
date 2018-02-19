@@ -19,7 +19,7 @@ class PropertiesViewModel: NSObject {
     var furnishingTypeFilters: [Property.FurnishingType] = []
     
     
-    var totalProperties : Int = 0
+    var totalProperties : Int?
     
     func filteredProperties() -> [Property] {
         return properties.filter { (property) -> Bool in
@@ -51,23 +51,11 @@ class PropertiesViewModel: NSObject {
     }
     
     func furnishing(index: Int) -> String {
-        return "\(filteredProperties()[index].furnishingDesc) Furnished"
+        return filteredProperties()[index].furnishingType.displayValue()
     }
     
     func bathroom(index: Int) -> String {
         return "\(filteredProperties()[index].bathroom) Bathrooms"
-    }
-    
-    func type(index: Int) -> Property.PropertyType {
-        return filteredProperties()[index].propertyType
-    }
-
-    func furnishingType(index: Int) -> Property.FurnishingType {
-        return filteredProperties()[index].furnishingType
-    }
-
-    func buildingType(index: Int) -> Property.BuildingType {
-        return filteredProperties()[index].propertyBuildingType
     }
     
     func rent(index: Int) -> String {
@@ -91,24 +79,33 @@ class PropertiesViewModel: NSObject {
         return imageString
     }
     
-    func callService(onSuccess: @escaping ()->()) {
+    var reachedLastPage: Bool {
+        guard let totalProperties = self.totalProperties  else {
+            return false
+        }
+        return totalProperties <= self.properties.count
+    }
+    
+    var isFilterApplied : Bool {
+        return (buildingTypeFilters.count > 0 || typeFilters.count > 0 || furnishingTypeFilters.count > 0)
+    }
+    
+    func callService(onSuccess: @escaping (Int)->()) {
         webService.fetch(onSuccess: { (properties, total) in
             self.properties = properties
             self.totalProperties = total
-            onSuccess()
+            onSuccess(self.numberOfProperties())
         }) {
             print("failed")
         }
     }
     
-    func fetchNextPage(onSuccess: @escaping ()->()) {
-        guard totalProperties > self.properties.count else {
-            return
-        }
+    func fetchNextPage(onSuccess: @escaping (Int)->()) {
+        guard !reachedLastPage else { return }
         webService.fetch(nextPage: true, onSuccess: { (properties, total) in
             self.properties.append(contentsOf: properties)
             self.totalProperties = total
-            onSuccess()
+            onSuccess(self.numberOfProperties())
         }) {
             print("failed")
         }

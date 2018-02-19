@@ -43,6 +43,19 @@ struct Property: Decodable {
         case fullyFurnished = "FULLY_FURNISHED"
         case semiFurnished = "SEMI_FURNISHED"
         case none = "NONE"
+        
+        static let values = [
+            fullyFurnished: "Fully Furnished",
+            semiFurnished: "Semi Furnished",
+            none: "Not Furnished"
+        ]
+        
+        func displayValue() -> String {
+            guard let value = FurnishingType.values[self] else {
+                return FurnishingType.values[.none]!
+            }
+            return value
+        }
     }
     
     

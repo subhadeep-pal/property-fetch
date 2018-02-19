@@ -3,7 +3,7 @@
 //  Health App
 //
 //  Created by Subhadeep Pal on 07/11/17.
-//  Copyright © 2017 Virtual Elf LLC. All rights reserved.
+//  Copyright © 2017 Subhadeep Pal. All rights reserved.
 //
 
 import UIKit

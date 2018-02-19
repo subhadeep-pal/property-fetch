@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142B7E3A203B3596003A5B89 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B7E39203B3596003A5B89 /* LoadingTableViewCell.swift */; };
 		14DF2C13203819FF00EB56D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2C12203819FF00EB56D4 /* AppDelegate.swift */; };
 		14DF2C18203819FF00EB56D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DF2C16203819FF00EB56D4 /* Main.storyboard */; };
 		14DF2C1A203819FF00EB56D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DF2C19203819FF00EB56D4 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142B7E39203B3596003A5B89 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		14DF2C0F203819FF00EB56D4 /* No Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DF2C12203819FF00EB56D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14DF2C17203819FF00EB56D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				14DF2C2420381B5200EB56D4 /* HomeTableViewController.swift */,
 				14DF2C2C2039335A00EB56D4 /* HomeTableViewCell.swift */,
+				142B7E39203B3596003A5B89 /* LoadingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				14DF2C33203934F500EB56D4 /* PropertiesWebService.swift in Sources */,
 				14DF2C2720381E4B00EB56D4 /* GradientUIView.swift in Sources */,
 				14DF2C3A203ADDA000EB56D4 /* UIButtonX.swift in Sources */,
+				142B7E3A203B3596003A5B89 /* LoadingTableViewCell.swift in Sources */,
 				14DF2C2D2039335A00EB56D4 /* HomeTableViewCell.swift in Sources */,
 				14DF2C352039984E00EB56D4 /* ImageLoader.swift in Sources */,
 				14DF2C13203819FF00EB56D4 /* AppDelegate.swift in Sources */,
