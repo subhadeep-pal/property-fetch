@@ -18,10 +18,24 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.white
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
         let oldCount = viewModel.numberOfProperties()
         viewModel.callService {
             newCount in
             self.updateTableView(previousCount: oldCount, updatedCount: newCount)
+        }
+    }
+    
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        viewModel.callService {_ in
+            self.tableView.reloadData()
+            refreshControl.endRefreshing()
+            self.endLoading()
         }
     }
     
